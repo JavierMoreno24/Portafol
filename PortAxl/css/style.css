@@ -236,7 +236,7 @@
   }
   .sobre-mi h2{font-size:clamp(30px,4vw,44px);margin-bottom:22px;}
   .sobre-mi p{
-    font-size:16px;
+    font-size:15px;
     line-height:1.75;
     color:#3a382f;
     max-width:56ch;
