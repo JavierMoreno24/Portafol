@@ -1,0 +1,25 @@
+/* Estado inicial: solo se ve el label "Enviar" */
+.send-btn .spinner,
+.send-btn .check,
+.send-btn .done-label {
+  display: none;
+}
+
+/* Estado enviando: oculta "Enviar", muestra el spinner */
+.send-btn.sending .label.show {
+  display: none;
+}
+.send-btn.sending .spinner {
+  display: inline-block;
+  /* aquí van tus estilos de animación de spinner, ej: */
+  /* animation: spin 0.8s linear infinite; */
+}
+
+/* Estado enviado: muestra check + "Mensaje enviado" */
+.send-btn.sent .spinner {
+  display: none;
+}
+.send-btn.sent .check,
+.send-btn.sent .done-label {
+  display: inline-block;
+}
