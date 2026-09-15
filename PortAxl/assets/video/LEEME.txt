@@ -1,0 +1,4 @@
+Pon aquí tus videos si decides agregar motion/reel a la web. Actualmente el
+sitio no reproduce ningún video — es solo espacio reservado.
+
+Si agregas un video de fondo, usa .mp4 (comprimido, sin audio si es de fondo).

@@ -1,0 +1,17 @@
+
+/* =========================================================
+   ANIMACIONES — PortAxl
+   Si quieres cambiar la velocidad o suavidad de los efectos,
+   primero revisa las variables de css/base.css.
+   ========================================================= */
+@keyframes spin{to{transform:rotate(360deg);}}
+@keyframes grain-move{
+  0%{transform:translate(0,0);}
+  20%{transform:translate(-2%,2%);}
+  40%{transform:translate(2%,-2%);}
+  60%{transform:translate(-1%,1%);}
+  80%{transform:translate(3%,1%);}
+  100%{transform:translate(0,0);}
+}
+@keyframes pageCardIn{to{opacity:1;transform:translateY(0);}}
+.page-card-in{opacity:0;transform:translateY(16px);animation:pageCardIn var(--m) var(--standard) forwards;}

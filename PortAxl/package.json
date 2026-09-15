@@ -1,0 +1,12 @@
+{
+  "name": "portaxl",
+  "version": "1.0.0",
+  "description": "PortAxl — portfolio web HTML, CSS y JavaScript puro",
+  "private": true,
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

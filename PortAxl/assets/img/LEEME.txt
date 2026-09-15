@@ -1,0 +1,11 @@
+Pon aquí tus imágenes reales. Nombres esperados por el código (puedes cambiarlos,
+solo actualiza la ruta en css/style.css donde dice "PARA PONER TU FOTO REAL"):
+
+- hero-photo.jpg        → foto principal de portada (sección Hero)
+- sobre-mi-photo.jpg    → foto de la sección "Sobre mí"
+- proyecto-01.jpg, proyecto-02.jpg, ... → miniaturas de la galería de proyectos
+- favicon.png (32x32 o 64x64) → ícono de pestaña del navegador
+
+Formatos recomendados: .jpg o .webp para fotos (más liviano), .png si necesitas
+transparencia. Tamaño recomendado: 1600px de ancho máximo, comprimido
+(usa https://squoosh.app o similar antes de subir).

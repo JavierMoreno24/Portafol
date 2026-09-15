@@ -1,0 +1,2 @@
+Espacio reservado para íconos sueltos (SVG) si en el futuro reemplazas los que
+están dibujados directo en el HTML.
