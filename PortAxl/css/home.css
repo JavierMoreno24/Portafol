@@ -170,6 +170,7 @@
     position:relative;
   }
   .gallery-viewport{
+    color: var(--verde);
     position:sticky;
     top:0;
     height:100vh;
@@ -187,7 +188,7 @@
     position:relative;
     flex:0 0 clamp(240px,26vw,340px);
     height:56vh;
-    border-radius:6px;
+    border-radius:10px;
     background:var(--gris);
     overflow:hidden;
     opacity:0.4;
@@ -197,6 +198,7 @@
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
+    box-shadow: 1px 1px 30px 2px #727272;
   }
   .g-card.active{
     opacity:1;
@@ -220,10 +222,13 @@
      PARA PONER IMÁGENES REALES en las tarjetas de la galería: agrega
      background-image:url("../assets/img/NOMBRE.jpg"); background-size:cover;
      background-position:center; a cada regla de abajo. */
-  .g-card[data-cat="Motion design"]{background:#cfd6cf;}
+  .g-card[data-cat="Motion design"]{background-image:url("../assets/img/Portada/portada audiovisual.png") ; background-size: cover; background-position: center;}
+  
   .g-card[data-cat="Branding"]{background:#d9d3c3;}
-  .g-card[data-cat="Editorial"]{background:#d6d2c9;}
-  .g-card[data-cat="Web design"]{background:#ccd6d2;}
+
+  .g-card[data-cat="Imagen"]{background-image:url("../assets/img/Portada/portada\ imagen.png") ; background-size: cover; background-position: center;}
+  
+  .g-card[data-cat="Diseño Gráfico"]{background-image:url("../assets/img/Portada/portada diseño grafico.png") ; background-size: cover; background-position: center;}
 
   .gallery-hint{
     text-align:center;

@@ -4,7 +4,7 @@
   const track=document.getElementById('galleryTrack'),viewport=document.getElementById('galleryViewport'),pin=document.getElementById('galleryPin');
   if(!track||!viewport||!pin)return;
   const originals=[...track.querySelectorAll('.g-card')];
-  const REPEATS=5;
+  const REPEATS=3;/* esto es la cantidad de repeticiones */
   for(let r=1;r<REPEATS;r++) originals.forEach(card=>track.appendChild(card.cloneNode(true)));
   const allCards=[...track.querySelectorAll('.g-card')];
   const gap=28; let setWidth=0,manualOffset=0,rafDrag=null;
