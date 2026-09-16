@@ -533,6 +533,11 @@ body.overlay-active{overflow:hidden;}
 @media (max-width:600px){
   .chips{justify-content:center; gap:12px;}
   .chip{padding:12px 20px; font-size:14px;}
+
+.sm-eyebrow{text-align:center;}
+.stats{flex-direction:column; align-items:center;gap:24px;}
+.stats .stat{max-width:none;text-align:center;}
+.sobre-mi .btn{display:block;width:fit-content;margin:0 auto;}
 }
 .overlay-card{
   background:#fff;
