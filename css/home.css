@@ -320,14 +320,18 @@
   .contacto-info p{font-size:16px;line-height:1.7;color:#3a382f;margin-bottom:28px;max-width:42ch;}
   .contacto-info ul{list-style:none;}
   .contacto-info li{
-    font-size:14.5px;
-    padding:12px 0;
-    border-top:1px solid rgba(24,23,18,0.1);
-    display:flex;
-    justify-content:space-between;
+   font-size: 14.5px;
+    padding: 16px 0;
+    border-top: 1px solid rgba(24,23,18,0.1);
+
+    display: grid;
+    grid-template-columns: 125px minmax(0, 1fr);
+    column-gap: 30px;
+    align-items: center;
   }
   .contacto-info li:last-child{border-bottom:1px solid rgba(24,23,18,0.1);}
   .contacto-info li span:first-child{color:#6a6858;}
+  .contacto-info li span:last-child {text-align: right; line-height: 1.4;}
 
   form.contact-form .field{margin-bottom:22px;}
   form.contact-form label{
@@ -509,6 +513,13 @@ body.overlay-active{overflow:hidden;}
 }
 @media (max-width:900px){.overlay-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:600px){.overlay-grid{grid-template-columns:1fr;}}
+/* MÓVIL PARTE DE LA INFO*/
+@media (max-width: 600px) {
+
+    .contacto-info li {grid-template-columns: 1fr;gap: 6px;align-items: start;padding: 16px 0;}
+    .contacto-info li span:last-child {text-align: left;}
+}
+
 
 .overlay-card{
   background:#fff;
