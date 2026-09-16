@@ -124,7 +124,7 @@
   .sobre-mi .container{
     display:grid;
     grid-template-columns:0.8fr 1.2fr;
-    gap:64px;
+    gap: 64px;
     align-items:start;
   }
   .sm-photo{
@@ -520,7 +520,19 @@ body.overlay-active{overflow:hidden;}
     .contacto-info li span:last-child {text-align: left;}
 }
 
+/* ---------- PROYECTOS EN MÓVIL ---------- */
+@media (max-width: 600px) {
 
+    .proyectos-head {display: flex; flex-direction: column; align-items: flex-start;justify-content: flex-start;gap: 22px; margin-bottom: 40px;}
+
+    .proyectos-head h2 {font-size: 42px; line-height: 1;margin: 0;}
+
+    .proyectos-head a {display: block; width: 100%; font-size: 15px; line-height: 1.4;padding-bottom: 10px; text-align: left; text-align: right;}
+}
+@media (max-width:600px){
+  .chips{justify-content:center; gap:12px;}
+  .chip{padding:12px 20px; font-size:14px;}
+}
 .overlay-card{
   background:#fff;
   border:1px solid rgba(24,23,18,0.08);
