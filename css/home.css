@@ -158,8 +158,9 @@
   .stats .stat{min-width:100px;}
   .stats .stat b{
     font-family:'Fraunces',serif;
-    font-size:34px;
+    font-size:24px;
     display:block;
+    text-align: center;
   }
   .stats .stat span{font-size:13px;color:#5a5748;}
 
