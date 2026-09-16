@@ -28,7 +28,7 @@
 .project-meta{font-size:12px;color:#6a6858;margin-top:16px;}
 
 .case-layout{display:grid;grid-template-columns:1.3fr .7fr;gap:64px;align-items:start;}
-.case-intro{font-size:18px;line-height:1.75;color:#3a382f;margin-bottom:42px;max-width:65ch;}
+.case-intro{font-size:17px;line-height:1.75;color:#3a382f;margin-bottom:42px;max-width:65ch; text-align: justify;}
 .case-steps{display:grid;gap:18px;}
 .case-step{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:22px 0;border-top:1px solid rgba(24,23,18,.1);}
 .case-step:last-child{border-bottom:1px solid rgba(24,23,18,.1);}

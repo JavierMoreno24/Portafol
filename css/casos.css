@@ -1,0 +1,12 @@
+.Farmacia-photo{
+    aspect-ratio:3/4;
+    background:var(--gris);
+    border-radius:6px;
+    background-image: url("../assets/img/casos/farmacia/Imagen\ principal.jpg"); background-size: contain; background-position: center; background-repeat: no-repeat;
+    /* PARA PONER TU FOTO REAL: descomenta la línea de abajo. La foto debe
+       vivir en assets/img/sobre-mi-photo.jpg */
+    /* background-image:url("../assets/img/sobre-mi-photo.jpg"); background-size:cover; background-position:center; */
+  }
+  .sm-eyebrow{
+    font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--verde);margin-bottom:18px;font-weight:500;
+  }
