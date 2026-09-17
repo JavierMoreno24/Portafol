@@ -1,0 +1,100 @@
+.sm-eyebrow{
+    font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--verde);margin-bottom:18px;font-weight:500;
+  }
+
+  /* ---------- HERO de caso de estudio (imagen principal, arriba) ---------- */
+  .case-hero{
+    aspect-ratio:16/9;
+    width:100%;
+    border-radius:10px;
+    overflow:hidden;
+    background:var(--gris);
+    margin-bottom:48px;
+  }
+  .case-hero img{
+    width:100%;height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center center;
+  }
+
+  /* ---------- Galería de aplicaciones (papelería / publicaciones / redes) ---------- */
+  .case-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    margin-top:64px;
+  }
+  .case-gallery figure{margin:0;}
+
+  /* Una sola regla para las 3 tarjetas: mismo tamaño, mismo comportamiento */
+  .case-gallery-img,
+  .case-gallery-img-r{
+    aspect-ratio:4/5;
+    border-radius:8px;
+    overflow:hidden;
+    background:#fff;
+    margin-bottom:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .case-gallery-img img,
+  .case-gallery-img-r img{
+    width:90%;
+    height:90%;
+    display:block;
+    object-fit:contain;
+    object-position:center;
+    transition:transform var(--m) var(--standard);
+  }
+
+  .case-gallery figure:hover img{transform:scale(1.04);}
+
+  .case-gallery figcaption{
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-weight:500;
+    color:var(--negro);
+    text-align:center;
+  }
+
+  @media (max-width:900px){
+    .case-hero{aspect-ratio:4/3;}
+  }
+
+  /* 👇 este era el bug: estaba en 300px, ahora activa en celulares reales */
+  @media (max-width:700px){
+    .case-gallery{
+      grid-template-columns:1fr; /* una imagen debajo de otra */
+      gap:28px;
+      margin-top:48px;
+    }
+    .case-gallery-img,
+    .case-gallery-img-r{
+      max-width:320px;         /* que no ocupen todo el ancho de golpe */
+      margin-left:auto;
+      margin-right:auto;
+    }
+   @media (max-width:900px){
+  .case-hero{aspect-ratio:4/3;}
+}
+@media (max-width:700px){
+  .case-gallery{
+    grid-template-columns:1fr;
+    gap:28px;
+    margin-top:48px;
+  }
+  .case-gallery-img,
+  .case-gallery-img-r{
+    max-width:320px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  /* ya no reseteamos el aspect-ratio aquí: se queda en 4/3 */
+  .case-hero{
+    margin-bottom:32px;
+    border-radius:8px;
+  }
+}
