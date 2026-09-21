@@ -1,0 +1,227 @@
+/* =========================================================
+   CONCEPTOS — PortAxl
+   Sección "Un concepto por sección" del caso de ilustración.
+   Usa las variables de css/base.css (--crema, --negro, --verde,
+   --gris, --m, --s, --standard) para verse igual que el resto del sitio.
+   Se carga en casos/Ilustraciones.html DESPUÉS de pages.css.
+   ========================================================= */
+
+/* ---------- Etiqueta pequeña (igual que .sm-eyebrow) ---------- */
+.cps-eyebrow{
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--verde);font-weight:500;margin-bottom:18px;
+}
+
+/* =========================================================
+   RESUMEN: las 8 piezas juntas (arriba del caso)
+   ========================================================= */
+.cps-overview{margin:0 0 72px;}
+.cps-overview ol{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(8,minmax(0,1fr));
+  gap:14px;
+}
+.cps-thumb{display:block;}
+.cps-thumb-img{
+  display:block;
+  aspect-ratio:5/7;
+  background:#fff;
+  border:1px solid rgba(24,23,18,.08);
+  border-radius:8px;
+  overflow:hidden;
+  transition:transform var(--m) var(--standard),box-shadow var(--m) var(--standard);
+}
+.cps-thumb:hover .cps-thumb-img,
+.cps-thumb:focus-visible .cps-thumb-img{
+  transform:translateY(-5px);
+  box-shadow:0 18px 40px -25px rgba(24,23,18,.35);
+}
+.cps-thumb img{width:100%;height:100%;display:block;object-fit:contain;}
+.cps-thumb-n{
+  display:block;margin-top:10px;
+  font-family:'Fraunces',serif;font-size:13px;color:rgba(24,23,18,.5);
+}
+.cps a:focus-visible,
+.cps-overview a:focus-visible{outline:2px solid var(--verde);outline-offset:3px;}
+
+/* =========================================================
+   SECCIÓN PRINCIPAL
+   ========================================================= */
+/* base.css aplica section{padding:80px 0}: aquí lo anulamos */
+.cps{padding:0;margin-top:96px;}
+
+.cps-head{max-width:820px;margin-bottom:48px;}
+.cps-head h2{
+  font-size:clamp(32px,4.6vw,52px);
+  line-height:1.05;
+  margin-bottom:16px;
+}
+.cps-head p{font-size:16px;line-height:1.7;color:#3a382f;max-width:62ch;}
+
+.cps-list{list-style:none;border-top:1px solid rgba(24,23,18,.1);}
+
+/* Un concepto = texto a la izquierda, moodboard + ilustración a la derecha */
+.cps-item{
+  display:grid;
+  grid-template-columns:minmax(0,.8fr) minmax(0,2.2fr);
+  gap:32px 56px;
+  align-items:start;
+  padding:52px 0;
+  border-bottom:1px solid rgba(24,23,18,.1);
+  scroll-margin-top:110px;          /* el menú fijo no tapa el título al saltar desde el resumen */
+}
+.cps-info{position:sticky;top:120px;}
+.cps-num{
+  display:block;
+  font-family:'Fraunces',serif;font-size:20px;
+  color:var(--verde);margin-bottom:14px;
+}
+.cps-name{
+  font-size:clamp(24px,2.6vw,32px);
+  line-height:1.12;
+  margin-bottom:18px;
+}
+.cps-label{
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--verde);font-weight:500;margin-bottom:8px;
+}
+.cps-text{font-size:14.5px;line-height:1.7;color:#3a382f;max-width:38ch;}
+
+/* Moodboard + ilustración */
+.cps-figs{
+  display:grid;
+  grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);
+  gap:24px;
+  align-items:start;
+}
+.cps-fig{margin:0;min-width:0;}
+.cps-frame{
+  display:block;
+  overflow:hidden;
+  border-radius:8px;
+  background:var(--gris);
+  cursor:zoom-in;
+}
+.cps-frame img{
+  width:100%;height:100%;display:block;;
+  transition:transform var(--m) var(--standard);
+}
+.cps-frame:hover img{transform:scale(1.04);}
+
+.cps-fig--mb .cps-frame{aspect-ratio:4/3;border:1px solid rgba(24,23,18,.08);}
+.cps-fig--mb .cps-frame img{object-fit:cover;}
+
+.cps-fig--ilu .cps-frame{aspect-ratio:5/7;background:#fff;border:1px solid rgba(24,23,18,.08);}
+.cps-fig--ilu .cps-frame img{object-fit:contain;}
+
+/* Mismo estilo que los pies de la galería de Farmacia */
+.cps-fig figcaption{
+  margin-top:14px;
+  font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:500;color:var(--negro);text-align:center;
+}
+
+/* ---------- Tablet: texto arriba, dos columnas de imágenes ---------- */
+@media (max-width:900px){
+  .cps{margin-top:80px;}
+  .cps-overview ol{grid-template-columns:repeat(4,minmax(0,1fr));}
+  .cps-item{grid-template-columns:1fr;gap:28px;padding:40px 0;}
+  .cps-info{position:static;}
+  .cps-text{max-width:60ch;}
+}
+
+/* ---------- Celular: una columna ---------- */
+@media (max-width:700px){
+  .cps-overview{margin-bottom:56px;}
+  .cps-overview ol{gap:10px;}
+  .cps-thumb-n{margin-top:6px;font-size:12px;}
+  .cps{margin-top:64px;}
+  .cps-head{margin-bottom:32px;}
+  .cps-item{padding:32px 0;}
+  .cps-figs{grid-template-columns:1fr;gap:28px;}
+  .cps-fig--ilu{max-width:320px;width:100%;margin-inline:auto;}
+}
+
+/* =========================================================
+   VISOR AMPLIADO (lo crea js/conceptos.js)
+   Fondo crema: las ilustraciones tienen fondo transparente
+   y textos negros; sobre negro no se leerían.
+   ========================================================= */
+html.cps-lb-open{overflow:hidden;}
+
+.cps-lb{
+  width:100%;height:100vh;height:100dvh;
+  max-width:none;max-height:none;
+  margin:0;padding:0;border:0;
+  background:transparent;color:var(--negro);
+}
+.cps-lb::backdrop{
+  background:rgba(245,241,232,.98);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+}
+.cps-lb[open]{display:flex;flex-direction:column;}
+
+.cps-lb__bar{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 32px;
+}
+.cps-lb__count{font-size:13px;letter-spacing:.06em;font-variant-numeric:tabular-nums;color:#6a6858;}
+
+.cps-lb__btn{
+  display:inline-grid;place-items:center;
+  min-width:44px;min-height:44px;padding:0;
+  border:1px solid rgba(24,23,18,.25);border-radius:50%;
+  background:transparent;color:var(--negro);
+  font:inherit;font-size:22px;line-height:1;cursor:pointer;
+  transition:background var(--s) var(--standard),color var(--s) var(--standard);
+}
+.cps-lb__btn:hover{background:var(--negro);color:var(--crema);}
+.cps-lb__btn:focus-visible{outline:2px solid var(--verde);outline-offset:3px;}
+
+.cps-lb__stage{
+  flex:1;min-height:0;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  grid-template-areas:"prev fig next";
+  align-items:center;gap:20px;
+  padding:0 32px 28px;
+}
+.cps-lb__prev{grid-area:prev;}
+.cps-lb__next{grid-area:next;}
+.cps-lb__fig{
+  grid-area:fig;margin:0;min-height:0;
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+}
+.cps-lb__img{
+  display:block;max-width:100%;
+  max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px);
+  width:auto;height:auto;object-fit:contain;
+  border-radius:8px;background:#fff;
+  box-shadow:0 30px 60px -30px rgba(24,23,18,.35);
+}
+.cps-lb__cap{text-align:center;max-width:60ch;}
+.cps-lb__cap strong{
+  display:block;font-family:'Fraunces',serif;font-weight:400;
+  font-size:20px;line-height:1.25;letter-spacing:-.01em;
+}
+.cps-lb__cap span{
+  display:block;margin-top:4px;
+  font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#6a6858;
+}
+
+@media (max-width:700px){
+  .cps-lb__bar{padding:14px 18px;}
+  .cps-lb__stage{
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:"fig fig" "prev next";
+    align-content:center;
+    padding:0 18px 22px;
+  }
+  .cps-lb__prev{justify-self:start;}
+  .cps-lb__next{justify-self:end;}
+  .cps-lb__img{max-height:calc(100vh - 280px);max-height:calc(100dvh - 280px);}
+}
+@keyframes cps-fade{from{opacity:0;}to{opacity:1;}}
+.cps-lb[open] .cps-lb__img{animation:cps-fade var(--s) var(--standard);}
