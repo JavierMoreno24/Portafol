@@ -225,3 +225,46 @@ html.cps-lb-open{overflow:hidden;}
 }
 @keyframes cps-fade{from{opacity:0;}to{opacity:1;}}
 .cps-lb[open] .cps-lb__img{animation:cps-fade var(--s) var(--standard);}
+
+/* ---------- TABLA: DEL SISTEMA DEL CUERPO A LA IDEA ---------- */
+
+.concept-table{
+    background:#fff;
+    border:1px solid rgba(24,23,18,.08);
+    border-radius:8px;
+    padding:28px;
+    margin-top:22px;
+}
+
+.concept-table h3{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.concept-table ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.concept-table li{
+    padding:12px 0;
+    border-top:1px solid rgba(24,23,18,.1);
+    font-size:13.5px;
+    line-height:1.6;
+
+    display:grid;
+    grid-template-columns:100px 1fr;
+    gap:16px;
+}
+
+.concept-table li:last-child{
+    border-bottom:1px solid rgba(24,23,18,.1);
+}
+
+.concept-table span:first-child{
+    color:#6a6858;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    font-size:11.5px;
+}

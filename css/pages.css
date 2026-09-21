@@ -45,7 +45,7 @@
 
 .page-note{margin-top:70px;padding-top:28px;border-top:1px solid rgba(24,23,18,.1);font-size:13px;color:#6a6858;}
 
-@media (max-width:900px){.case-layout{grid-template-columns:1fr;}.case-aside{order:-1;position:static;}.project-list{grid-template-columns:1fr;}}
+@media (max-width:900px){.case-layout{grid-template-columns:1fr;}.case-aside{order:-1;position:static;}.concept-table{ order:initial;}.project-list{grid-template-columns:1fr;}}
 @media (max-width:600px){.page-main{padding-top:95px;}.project-list{gap:20px;}}
 
 
