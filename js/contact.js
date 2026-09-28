@@ -41,6 +41,7 @@
         body: formData,
       });
       const data = await response.json();
+      console.log(response.status, data);
 
       if (!response.ok || !data.success) throw new Error('Envío rechazado');
 
